@@ -3,23 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GKV Kelompok 1</title>
+    <title>Visualisasi Data Perikanan Negara Asia Tenggara</title>
 
-    <!-- Tailwind -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
 
-    <!-- Plotly + D3 -->
-    <script
-      src="https://cdn.plot.ly/plotly-3.0.1.min.js"
-      charset="utf-8"
-    ></script>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script type="module">
+      console.log("Script running...");
+      import fishProduction from "./fishProduction.lineChart.js";
+      import fishConsumption from "./fishConsumption.lineChart.js";
+      import fishAverage from "./fish.barChart.js";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("DOM loaded, running fishProduction...");
+        fishProduction();
+        fishConsumption();
+        fishAverage();
+      });
+    </script>
   </head>
 
   <body class="min-h-screen flex flex-col items-center p-4 bg-gray-50">
+    <h1 class="text-4xl font-bold mb-10">Data Perikanan di Negara Asia Tenggara</h1>
 
+    <div class="w-[70dvw] flex flex-col items-center justify-center">
+      <h4 class="font-semibold text-2xl">Data Produksi 2010-2013 Ikan di Negara Asia Tenggara</h4>
+      <div id="chart1" class="w-full max-w-6xl h-[500px] mb-[30px]"></div>
+    </div>
+
+    <div  class="w-[70dvw] flex flex-col items-center justify-center">
+      <h4 class="font-semibold text-2xl">Data Produksi 2010-2013 Ikan di Negara Asia Tenggara</h4>
+      <div id="chart2" class="w-full max-w-6xl h-[500px] mb-[30px]"></div>
+    </div>
+
+    <div  class="w-[70dvw] flex flex-col items-center justify-center">
+      <h4 class="font-semibold text-2xl">Data Produksi 2010-2013 Ikan di Negara Asia Tenggara</h4>
+      <div id="chart3" class="w-full max-w-6xl h-[500px] mb-[30px]"></div>
+    </div>
   </body>
-
-  <script src="fishConsumption.barChart.js"></script>
-
 </html>
