@@ -21,8 +21,8 @@ function fishAverage(){
     
     const layout = {
         barmode: 'group',
-        xaxis: {title: ''},
-        yaxis: {title: ''},
+        xaxis: {title: 'Negara'},
+        yaxis: {title: 'Rata-Rata (1000 Ton)'},
         legend: {orientation: 'h', y: 1.1},
         margin: {t: 50, b: 80, l: 80, r: 40}
     };

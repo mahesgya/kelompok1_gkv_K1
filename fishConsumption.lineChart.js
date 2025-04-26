@@ -38,8 +38,8 @@ function fishConsumption(){
     };
     
     const layout = {
-        xaxis: {title: ''},
-        yaxis: {title: ''},
+        xaxis: {title: 'Tahun'},
+        yaxis: {title: 'Berat (1000 Ton)'},
         legend: {orientation: 'h', y: 1.1},
         margin: {t: 50, b: 80, l: 80, r: 40}
     };
